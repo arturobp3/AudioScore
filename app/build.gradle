@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.chaquo.python'
 }
 
 android {
@@ -15,26 +14,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
-        }
-        python {
-            buildPython "C:/Users/bpart/AppData/Local/Programs/Python/Python38-32/python.exe"
-            pip {
-                install "librosa>=0.8.0"
-                install "mir_eval>=0.6"
-                install "numpy>=1.18,<1.24"
-                install "pretty_midi>=0.2.9"
-                install "resampy>=0.2.2"
-                install "tensorflow>=2.1.0"
-                install "scipy>=1.4.1"
-                install "cython"
-                install "numba"
-                install "soxr"
-                install "typing-extensions"
-                install "basic-pitch"
-            }
-        }
     }
 
     buildTypes {
